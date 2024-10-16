@@ -12,8 +12,6 @@ let characters = document.querySelectorAll(".imgCharacters");
 
 characters.forEach(image => {
     image.addEventListener("mouseover", function() {
-        console.log("Vous avez survolé l'image :", image.src);
-        console.log(typeof(image.src));
         const imageName = image.src.split('/').pop();
         console.log(imageName);
         if (imageName.includes("cedric")){
@@ -28,5 +26,9 @@ characters.forEach(image => {
     });
     image.addEventListener("mouseout", function(){
         image.style.borderColor = "";
+    })
+
+    image.addEventListener("click", function(){
+        console.log("gihi");
     })
 });
